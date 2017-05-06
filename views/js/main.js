@@ -446,14 +446,22 @@ var resizePizzas = function(size) {
 
     return dx;
   }
-
+    
+    
+  // The general method/rule for optimizing your for-loops is this: 
+  // if a value doesn't change during the loop, compute that value
+  // outside of the loop, store it in a variable, and then call it 
+  // by the variable name inside the loop.
+    
   // Iterates through pizza elements on the page and changes their widths
   function changePizzaSizes(size) {
-    var x = document.getElementsByClassName("randomPizzaContainer");
-    for (var i = 0; i < x.length; i++) {
-      var dx = determineDx(x[i], size);
-      var newwidth = (x[i].offsetWidth + dx) + 'px';
-      x[i].style.width = newwidth;
+    var randomPizza = document.getElementsByClassName("randomPizzaContainer");
+    var pizzaLength = randomPizza.length;
+    var dx = determineDx(randomPizza[0], size);
+    var newwidth = (randomPizza[0].offsetWidth + dx) + 'px';
+      
+    for (var i = 0; i < pizzaLength; i++) {
+      randomPizza[i].style.width = newwidth;
     }
   }
 
