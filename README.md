@@ -1,34 +1,20 @@
-## Website Performance Optimization portfolio project
+# Website Performance Optimization portfolio project
 
-Your challenge, if you wish to accept it (and we sure hope you will), is to optimize this online portfolio for speed! In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
+## Part 1: Optimize PageSpeed Insights score for index.html
 
-To get started, check out the repository and inspect the code.
+### Optimizations made:
+* Minified style.css file, inlined, and moved to the header section
+* Scripts were moved to the bottom of the body
+* Loaded scripts asynchronously
+* Removed link to Open Sans font
 
-### Getting started
+#### Instructions for testing:
+* Copy and paste url: "https://rld2121.github.io/websiteOpt" into <a href = "https://developers.google.com/speed/pagespeed/insights/?url=https%3A%2F%2Frld2121.github.io%2FwebsiteOpt">PageSpeed Insights</a>
 
-#### Part 1: Optimize PageSpeed Insights score for index.html
+#### Results on PageSpeed Insights
+* Mobile -  91/100
+* Desktop - 92/100
 
-Some useful tips to help you get started:
-
-1. Check out the repository
-1. To inspect the site on your phone, you can run a local server
-
-  ```bash
-  $> cd /path/to/your-project-folder
-  $> python -m SimpleHTTPServer 8080
-  ```
-
-1. Open a browser and visit localhost:8080
-1. Download and install [ngrok](https://ngrok.com/) to the top-level of your project directory to make your local server accessible remotely.
-
-  ``` bash
-  $> cd /path/to/your-project-folder
-  $> ./ngrok http 8080
-  ```
-
-1. Copy the public URL ngrok gives you and try running it through PageSpeed Insights! Optional: [More on integrating ngrok, Grunt and PageSpeed.](http://www.jamescryer.com/2014/06/12/grunt-pagespeed-and-ngrok-locally-testing/)
-
-Profile, optimize, measure... and then lather, rinse, and repeat. Good luck!
 
 #### Part 2: Optimize Frames per Second in pizza.html
 
