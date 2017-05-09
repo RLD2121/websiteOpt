@@ -33,6 +33,12 @@
     * Defined elem outside the for loop
     * Moved document.getElementById out of the for loop
     * Changed amount of pizza loaded from 200 to 32
+#### Instructions for testing:
+* Load the <a href="https//rld2121.github.io/websiteOpt/views/pizza.html">Pizza site</a> and open Developer Tools.  With the console tab open, move the slider bar and scroll the page
+
+#### Results
+* Time to resize pizzas < 5ms
+* Scroll Framerate = 60 fps
     
     
 
