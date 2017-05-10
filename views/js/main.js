@@ -553,20 +553,23 @@ window.addEventListener('scroll', updatePositions);
 
 // Generates the sliding pizzas when the page loads.
 document.addEventListener('DOMContentLoaded', function() {
-
-    var s = 256;
     
-    //Code to dynamically calculate number of pizzas based on browser window
-    var cols = (window.innerWidth/73.333);
-    var rows = (window.innerHeight/100);
-    var numberofPizzas = cols * rows;
+    var s = 256;
+
+    //Dynamically change the number of Pizzas based on the browser window
+    //This forum post helped alot https://discussions.udacity.com/t/calculating-number-of-pizzas-with-inner-height/35343/5
+    var cols = Math.ceil(window.innerWidth/s);
+    var rows = Math.ceil(window.innerHeight/s);
+    var numberOfPizzas = cols * rows;
+    console.log(numberOfPizzas);
 
 
     //Define elem outside of for loop
     var elem;
     var movingPizzas1 = document.getElementById("movingPizzas1");
 
-    for (var i = 0; i < numberofPizzas; i++) {
+    for (var i = 0; i < numberOfPizzas; i++) {
+        
         elem = document.createElement('img');
         elem.className = 'mover';
         elem.src = "images/pizza.png";
