@@ -525,7 +525,7 @@ function updatePositions() {
     var itemsLength = items.length;
 
     //A constant that can be taken out of the for loop    
-    var scrollTop = document.body.scrollTop / 250;
+    var scrollTop = (document.body.scrollTop / 1250);
 
     //Created a phase array    
     var phase = [];
@@ -554,14 +554,19 @@ window.addEventListener('scroll', updatePositions);
 // Generates the sliding pizzas when the page loads.
 document.addEventListener('DOMContentLoaded', function() {
 
-    var cols = 8;
     var s = 256;
+    
+    //Code to dynamically calculate number of pizzas based on browser window
+    var cols = (window.innerWidth/73.333);
+    var rows = (window.innerHeight/100);
+    var numberofPizzas = cols * rows;
+
 
     //Define elem outside of for loop
     var elem;
     var movingPizzas1 = document.getElementById("movingPizzas1");
 
-    for (var i = 0; i < 32; i++) {
+    for (var i = 0; i < numberofPizzas; i++) {
         elem = document.createElement('img');
         elem.className = 'mover';
         elem.src = "images/pizza.png";
