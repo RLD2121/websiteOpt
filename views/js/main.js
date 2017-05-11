@@ -554,14 +554,13 @@ window.addEventListener('scroll', updatePositions);
 // Generates the sliding pizzas when the page loads.
 document.addEventListener('DOMContentLoaded', function() {
     
+    var cols = 8;
     var s = 256;
 
     //Dynamically change the number of Pizzas based on the browser window
     //This forum post helped alot https://discussions.udacity.com/t/calculating-number-of-pizzas-with-inner-height/35343/5
-    var cols = Math.ceil(window.innerWidth/s);
-    var rows = Math.ceil(window.innerHeight/s);
-    var numberOfPizzas = cols * rows;
-    console.log(numberOfPizzas);
+    var rowsPizza = Math.ceil(window.innerHeight/s);
+    var numberOfPizzas = cols * rowsPizza;
 
 
     //Define elem outside of for loop
